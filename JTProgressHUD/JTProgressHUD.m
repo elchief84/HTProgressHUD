@@ -12,9 +12,9 @@ static JTProgressHUD *sharedInstance = nil;
 static CGFloat kBGColorAlphaMax = 0.75;
 static CGFloat kBGColorAlphaSkip = 0.3;
 static CGFloat kAnimationDuration = 0.3;
-static CGFloat kAnimationCycleDuration = 1.5;
-static CGFloat kCircleWidth = 50.0;
-static CGFloat kBorderWidth = 3.0;
+static CGFloat kAnimationCycleDuration = 0.4;
+static CGFloat kCircleWidth = 100.0;
+static CGFloat kBorderWidth = 0.0;
 
 @interface JTProgressHUD()
 
@@ -26,6 +26,10 @@ static CGFloat kBorderWidth = 3.0;
 @property (nonatomic, strong) UIView *customView;
 @property (nonatomic, assign) JTProgressHUDTransition transition;
 @property (nonatomic, assign) JTProgressHUDStyle style;
+
+@property (nonatomic, strong) UIView *circle_1;
+@property (nonatomic, strong) UIView *circle_2;
+@property (nonatomic, strong) UIView *circle_3;
 
 @end
 
@@ -62,6 +66,9 @@ static CGFloat kBorderWidth = 3.0;
     sharedInstance.backgroundView.center = [UIApplication sharedApplication].keyWindow.center;
     sharedInstance.staticCircle.center = sharedInstance.backgroundView.center;
     sharedInstance.movingCircle.center = sharedInstance.backgroundView.center;
+    sharedInstance.circle_1.center = sharedInstance.backgroundView.center;
+    sharedInstance.circle_2.center = sharedInstance.backgroundView.center;
+    sharedInstance.circle_3.center = sharedInstance.backgroundView.center;
     sharedInstance.customView.center = sharedInstance.backgroundView.center;
 }
 
@@ -146,7 +153,7 @@ static CGFloat kBorderWidth = 3.0;
         sharedInstance.customView.center = sharedInstance.backgroundView.center;
         [[UIApplication sharedApplication].keyWindow addSubview:sharedInstance.customView];
     } else {
-        [sharedInstance createDefaultLoadingView];
+        [sharedInstance createHTLoadingView];
     }
     
     // Transition and animation
@@ -198,17 +205,26 @@ static CGFloat kBorderWidth = 3.0;
             sharedInstance.customView.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
             sharedInstance.staticCircle.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
             sharedInstance.movingCircle.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
+            sharedInstance.circle_1.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
+            sharedInstance.circle_2.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
+            sharedInstance.circle_3.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
         }
         
         sharedInstance.customView.alpha = 0.0;
         sharedInstance.staticCircle.alpha = 0.0;
         sharedInstance.movingCircle.alpha = 0.0;
+        sharedInstance.circle_1.alpha = 0.0;
+        sharedInstance.circle_2.alpha = 0.0;
+        sharedInstance.circle_3.alpha = 0.0;
     };
     
     void(^cleanupBlock)() = ^{
         [sharedInstance.customView removeFromSuperview];
         [sharedInstance.staticCircle removeFromSuperview];
         [sharedInstance.movingCircle removeFromSuperview];
+        [sharedInstance.circle_1 removeFromSuperview];
+        [sharedInstance.circle_2 removeFromSuperview];
+        [sharedInstance.circle_3 removeFromSuperview];
         [sharedInstance.backgroundView removeFromSuperview];
         sharedInstance.alpha = 0.0;
     };
@@ -337,11 +353,70 @@ static CGFloat kBorderWidth = 3.0;
     }];
 }
 
+- (void)createHTLoadingView {
+    // Default setup
+    sharedInstance.circle_1 = [sharedInstance createCircleWithWidth:kCircleWidth];
+    sharedInstance.circle_2 = [sharedInstance createCircleWithWidth:kCircleWidth];
+    sharedInstance.circle_3 = [sharedInstance createCircleWithWidth:kCircleWidth];
+    
+    // Animation
+    sharedInstance.circle_1.alpha = 0.0;
+    sharedInstance.circle_2.alpha = 0.0;
+    sharedInstance.circle_3.alpha = 0.0;
+    
+    if (sharedInstance.transition == JTProgressHUDTransitionDefault) {
+        sharedInstance.circle_1.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        sharedInstance.circle_2.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        sharedInstance.circle_3.transform = CGAffineTransformMakeScale(0.0, 0.0);
+    }
+    
+    sharedInstance.circle_1.center = sharedInstance.backgroundView.center;
+    sharedInstance.circle_2.center = sharedInstance.backgroundView.center;
+    sharedInstance.circle_3.center = sharedInstance.backgroundView.center;
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:sharedInstance.circle_1];
+    [[UIApplication sharedApplication].keyWindow addSubview:sharedInstance.circle_2];
+    [[UIApplication sharedApplication].keyWindow addSubview:sharedInstance.circle_3];
+    
+    // Animation
+    CGFloat delay = (sharedInstance.transition != JTProgressHUDTransitionNone) ? kAnimationDuration : 0.0;
+    
+    [UIView animateWithDuration:delay animations:^{
+        sharedInstance.circle_1.transform = CGAffineTransformMakeScale(0.4, 0.4);
+        sharedInstance.circle_2.transform = CGAffineTransformMakeScale(0.7, 0.7);
+        sharedInstance.circle_3.transform = CGAffineTransformMakeScale(1.0, 1.0);
+        sharedInstance.circle_1.alpha = 1.0;
+        sharedInstance.circle_2.alpha = 1.0;
+        sharedInstance.circle_3.alpha = 1.0;
+    } completion:nil];
+    
+    [UIView animateWithDuration:kAnimationCycleDuration delay:delay*3 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionCurveEaseInOut animations:^{
+        sharedInstance.circle_1.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        
+    } completion:^(BOOL finished) {
+        sharedInstance.circle_1.transform = CGAffineTransformMakeScale(0.4, 0.4);
+    }];
+    
+    [UIView animateWithDuration:kAnimationCycleDuration delay:delay*2 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse| UIViewAnimationOptionCurveEaseInOut animations:^{
+        sharedInstance.circle_2.transform = CGAffineTransformMakeScale(0.9, 0.9);
+        
+    } completion:^(BOOL finished) {
+        sharedInstance.circle_2.transform = CGAffineTransformMakeScale(0.7, 0.7);
+    }];
+    
+    [UIView animateWithDuration:kAnimationCycleDuration delay:delay options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse| UIViewAnimationOptionCurveEaseInOut animations:^{
+        sharedInstance.circle_3.transform = CGAffineTransformMakeScale(1.2, 1.2);
+    } completion:^(BOOL finished) {
+        sharedInstance.circle_3.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    }];
+}
+
 - (UIView *)createCircleWithWidth:(CGFloat)size {
     UIView *circle = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kCircleWidth, kCircleWidth)];
     circle.layer.cornerRadius = kCircleWidth / 2;
-    circle.layer.borderWidth = kBorderWidth;
-    circle.layer.borderColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9].CGColor;
+    circle.layer.borderWidth = 0;
+    circle.layer.borderColor = [UIColor clearColor].CGColor;
+    circle.layer.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.2].CGColor;
     circle.layer.masksToBounds = true;
     return circle;
 }

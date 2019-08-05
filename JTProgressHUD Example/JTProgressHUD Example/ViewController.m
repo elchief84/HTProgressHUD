@@ -42,13 +42,13 @@
     [JTProgressHUD showWithView:animationView style:_bgWithGradient transition:JTProgressHUDTransitionDefault backgroundAlpha:0.75];
     
     // Dismiss
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
+    [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
 }
 
 - (IBAction)BuiltBtnPressed:(id)sender {
     // Built-in animation
     [JTProgressHUD showWithStyle:_bgWithGradient];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
+    [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
 }
 
 - (void)hideHUD {
