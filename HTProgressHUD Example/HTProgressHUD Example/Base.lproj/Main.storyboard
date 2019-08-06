@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="NO" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <development version="7000" identifier="xcode"/>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-Sc-ecT">
@@ -22,14 +26,14 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLv-nC-zoG">
                                 <rect key="frame" x="16" y="508" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.25781935453414917" green="0.63812994956970215" blue="0.29485681653022766" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25781935453414917" green="0.63812994956970215" blue="0.29485681653022766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KCN-G5-Y2e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Built-in view">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="BuiltBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yJA-WM-KSV"/>
@@ -37,14 +41,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-QP-4OF">
                                 <rect key="frame" x="16" y="466" width="288" height="40"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MiC-BS-yrX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Custom view">
-                                    <color key="titleColor" red="0.65759897232055664" green="0.5252385139465332" blue="0.3323599100112915" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.65759897232055664" green="0.5252385139465332" blue="0.3323599100112915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="CustomBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="18a-bZ-8r5"/>
@@ -58,14 +62,14 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Show ">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="YOUR">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             <integer key="NSUnderline" value="1"/>
@@ -73,7 +77,7 @@
                                     </fragment>
                                     <fragment content=" view as a HUD">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -87,7 +91,7 @@
                                     <constraint firstAttribute="height" constant="38" id="Mvx-vF-Z4m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTProgressHUD Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCJ-5G-DrP">
@@ -96,17 +100,17 @@
                                     <constraint firstAttribute="height" constant="43" id="9SC-mW-4Kd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLW-lH-r94">
-                                <rect key="frame" x="235" y="389" width="49" height="31"/>
+                                <rect key="frame" x="235" y="389" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="9CJ-dd-oNN"/>
                                     <constraint firstAttribute="width" constant="49" id="Pjn-Tg-mCK"/>
                                 </constraints>
-                                <color key="onTintColor" red="0.25781935453414917" green="0.63812994956970215" blue="0.29485681653022766" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.25781935453414917" green="0.63812994956970215" blue="0.29485681653022766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="bgSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="CDg-BR-npd"/>
                                 </connections>
@@ -115,17 +119,17 @@
                                 <rect key="frame" x="36" y="394" width="183" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4z1-cr-zyE"/>
-                                    <constraint firstAttribute="width" constant="183" id="vp9-Pt-xRa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="vp9-Pt-xRa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.65759897232055664" green="0.5252385139465332" blue="0.3323599100112915" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.65759897232055664" green="0.5252385139465332" blue="0.3323599100112915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZQw-Sc-ecT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="20h-RY-eoC"/>
-                            <constraint firstItem="ZQw-Sc-ecT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="29D-Ct-vW6"/>
+                            <constraint firstItem="ZQw-Sc-ecT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-20" id="29D-Ct-vW6"/>
                             <constraint firstAttribute="centerX" secondItem="h5I-Hg-Zbm" secondAttribute="centerX" constant="32.5" id="3GR-hz-Ge9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZQw-Sc-ecT" secondAttribute="trailing" constant="-16" id="41g-VD-aH0"/>
                             <constraint firstItem="rpZ-QP-4OF" firstAttribute="leading" secondItem="nLv-nC-zoG" secondAttribute="leading" id="B99-3M-V8B"/>
@@ -149,7 +153,6 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nLv-nC-zoG" secondAttribute="bottom" constant="20" id="yCq-xh-Nam"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="bgSwitch" destination="mLW-lH-r94" id="dFE-V7-Ox9"/>
                     </connections>
