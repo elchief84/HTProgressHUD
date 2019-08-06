@@ -34,10 +34,10 @@ JTProgressHUD is designed as a **singleton** so you don't have to care about it'
 ### Simple example:
 ```objective-c
 // Your custom view
-[JTProgressHUD showWithView:yourAnimationView];
+[HTProgressHUD showWithView:yourAnimationView];
 
 // Built-in view
-[JTProgressHUD show];
+[HTProgressHUD show];
 ```
 
 ### Methods:
