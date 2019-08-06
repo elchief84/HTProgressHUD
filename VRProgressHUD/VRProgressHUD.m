@@ -1,14 +1,14 @@
 //
-//  HTProgressHUD.m
-//  HTProgressHUD
+//  VRProgressHUD.m
+//  VRProgressHUD
 //
 //  Created by Jakub Truhlar on 20.06.15.
 //  Copyright (c) 2015 Jakub Truhlar. All rights reserved.
 //
 
-#import "HTProgressHUD.h"
+#import "VRProgressHUD.h"
 
-static HTProgressHUD *sharedInstance = nil;
+static VRProgressHUD *sharedInstance = nil;
 static CGFloat kBGColorAlphaMax = 0.75;
 static CGFloat kBGColorAlphaSkip = 0.3;
 static CGFloat kAnimationDuration = 0.3;
@@ -16,7 +16,7 @@ static CGFloat kAnimationCycleDuration = 0.4;
 static CGFloat kCircleWidth = 100.0;
 static CGFloat kBorderWidth = 0.0;
 
-@interface HTProgressHUD()
+@interface VRProgressHUD()
 
 @property (nonatomic, strong) UIColor *styleColor1;
 @property (nonatomic, strong) UIColor *styleColor2;
@@ -24,8 +24,8 @@ static CGFloat kBorderWidth = 0.0;
 @property (nonatomic, strong) UIView *staticCircle;
 @property (nonatomic, strong) UIView *movingCircle;
 @property (nonatomic, strong) UIView *customView;
-@property (nonatomic, assign) HTProgressHUDTransition transition;
-@property (nonatomic, assign) HTProgressHUDStyle style;
+@property (nonatomic, assign) VRProgressHUDTransition transition;
+@property (nonatomic, assign) VRProgressHUDStyle style;
 
 @property (nonatomic, strong) UIView *circle_1;
 @property (nonatomic, strong) UIView *circle_2;
@@ -33,10 +33,10 @@ static CGFloat kBorderWidth = 0.0;
 
 @end
 
-@implementation HTProgressHUD
+@implementation VRProgressHUD
 
 #pragma mark - Initialization
-+ (HTProgressHUD *)sharedInstance {
++ (VRProgressHUD *)sharedInstance {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -87,27 +87,27 @@ static CGFloat kBorderWidth = 0.0;
 
 #pragma mark - Displaying
 + (void)show {
-    [HTProgressHUD showWithView:HTProgressHUDViewBuiltIn];
+    [VRProgressHUD showWithView:VRProgressHUDViewBuiltIn];
 }
 
 + (void)showWithView:(UIView *)view {
-    [HTProgressHUD showWithView:view style:HTProgressHUDStyleGradient transition:HTProgressHUDTransitionDefault backgroundAlpha:kBGColorAlphaMax];
+    [VRProgressHUD showWithView:view style:VRProgressHUDStyleGradient transition:VRProgressHUDTransitionDefault backgroundAlpha:kBGColorAlphaMax];
 }
 
-+ (void)showWithStyle:(HTProgressHUDStyle)style {
-    [HTProgressHUD showWithView:HTProgressHUDViewBuiltIn style:style transition:HTProgressHUDTransitionDefault backgroundAlpha:kBGColorAlphaMax];
++ (void)showWithStyle:(VRProgressHUDStyle)style {
+    [VRProgressHUD showWithView:VRProgressHUDViewBuiltIn style:style transition:VRProgressHUDTransitionDefault backgroundAlpha:kBGColorAlphaMax];
 }
 
-+ (void)showWithTransition:(HTProgressHUDTransition)transition {
-    [HTProgressHUD showWithView:HTProgressHUDViewBuiltIn style:HTProgressHUDStyleGradient transition:transition backgroundAlpha:kBGColorAlphaMax];
++ (void)showWithTransition:(VRProgressHUDTransition)transition {
+    [VRProgressHUD showWithView:VRProgressHUDViewBuiltIn style:VRProgressHUDStyleGradient transition:transition backgroundAlpha:kBGColorAlphaMax];
 }
 
 + (void)showWithBackgroundAlpha:(CGFloat)backgroundAlpha {
-    [HTProgressHUD showWithView:HTProgressHUDViewBuiltIn style:HTProgressHUDStyleGradient transition:HTProgressHUDTransitionDefault backgroundAlpha:backgroundAlpha];
+    [VRProgressHUD showWithView:VRProgressHUDViewBuiltIn style:VRProgressHUDStyleGradient transition:VRProgressHUDTransitionDefault backgroundAlpha:backgroundAlpha];
 }
 
-+ (void)showWithView:(UIView *)view style:(HTProgressHUDStyle)style transition:(HTProgressHUDTransition)transition backgroundAlpha:(CGFloat)backgroundAlpha {
-    if ([[HTProgressHUD sharedInstance] isVisible]) {
++ (void)showWithView:(UIView *)view style:(VRProgressHUDStyle)style transition:(VRProgressHUDTransition)transition backgroundAlpha:(CGFloat)backgroundAlpha {
+    if ([[VRProgressHUD sharedInstance] isVisible]) {
         return;
     }
     
@@ -121,26 +121,26 @@ static CGFloat kBorderWidth = 0.0;
     
     // Style
     if (!style) {
-        style = HTProgressHUDStyleDefault;
+        style = VRProgressHUDStyleDefault;
     }
     switch (style) {
-        case HTProgressHUDStyleDefault:
+        case VRProgressHUDStyleDefault:
             [sharedInstance createSolidBackground];
             [sharedInstance addBackgroundBelowHUD];
             break;
-        case HTProgressHUDStyleGradient:
+        case VRProgressHUDStyleGradient:
             [sharedInstance createGradientBackground];
             [sharedInstance addBackgroundBelowHUD];
             break;
-		case HTProgressHUDStyleBlurLight:
+		case VRProgressHUDStyleBlurLight:
 			[sharedInstance createBlurBackgroundWithStyle:UIBlurEffectStyleLight];
 			[sharedInstance addBackgroundBelowHUD];
 			break;
-		case HTProgressHUDStyleBlurExtraLight:
+		case VRProgressHUDStyleBlurExtraLight:
 			[sharedInstance createBlurBackgroundWithStyle:UIBlurEffectStyleExtraLight];
 			[sharedInstance addBackgroundBelowHUD];
 			break;
-		case HTProgressHUDStyleBlurDark:
+		case VRProgressHUDStyleBlurDark:
 			[sharedInstance createBlurBackgroundWithStyle:UIBlurEffectStyleDark];
 			[sharedInstance addBackgroundBelowHUD];
 			break;
@@ -159,13 +159,13 @@ static CGFloat kBorderWidth = 0.0;
     // Transition and animation
     sharedInstance.customView.alpha = 0.0;
     switch (transition) {
-        case HTProgressHUDTransitionDefault:
+        case VRProgressHUDTransitionDefault:
             sharedInstance.customView.transform = CGAffineTransformMakeScale(0.0, 0.0);
             break;
-        case HTProgressHUDTransitionFade:
+        case VRProgressHUDTransitionFade:
             sharedInstance.customView.transform = CGAffineTransformMakeScale(1.0, 1.0);
             break;
-        case HTProgressHUDTransitionNone:
+        case VRProgressHUDTransitionNone:
             sharedInstance.customView.transform = CGAffineTransformMakeScale(1.0, 1.0);
             break;
         default:
@@ -178,7 +178,7 @@ static CGFloat kBorderWidth = 0.0;
         sharedInstance.backgroundView.alpha = 1.0;
     };
     
-    if (transition != HTProgressHUDTransitionNone) {
+    if (transition != VRProgressHUDTransitionNone) {
         [UIView animateWithDuration:kAnimationDuration animations:^{
             animationBlock();
         } completion:nil];
@@ -189,18 +189,18 @@ static CGFloat kBorderWidth = 0.0;
 }
 
 + (void)hide {
-    [HTProgressHUD hideWithTransition:HTProgressHUDTransitionDefault];
+    [VRProgressHUD hideWithTransition:VRProgressHUDTransitionDefault];
 }
 
-+ (void)hideWithTransition:(HTProgressHUDTransition)transition {
-    if (![[HTProgressHUD sharedInstance] isVisible]) {
++ (void)hideWithTransition:(VRProgressHUDTransition)transition {
+    if (![[VRProgressHUD sharedInstance] isVisible]) {
         return;
     }
     
     void(^animationBlock)() = ^{
         sharedInstance.backgroundView.alpha = 0.0;
         
-        if (sharedInstance.transition == HTProgressHUDTransitionDefault) {
+        if (sharedInstance.transition == VRProgressHUDTransitionDefault) {
             CGFloat multiplier = [[UIScreen mainScreen] scale];
             sharedInstance.customView.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
             sharedInstance.staticCircle.transform = CGAffineTransformMakeScale(10.0 * multiplier, 10.0 * multiplier);
@@ -229,7 +229,7 @@ static CGFloat kBorderWidth = 0.0;
         sharedInstance.alpha = 0.0;
     };
     
-    if (transition != HTProgressHUDTransitionNone) {
+    if (transition != VRProgressHUDTransitionNone) {
         [UIView animateWithDuration:kAnimationDuration animations:^{
             animationBlock();
             
@@ -243,7 +243,7 @@ static CGFloat kBorderWidth = 0.0;
     }
 }
 
-#pragma mark - HTProgressHUDStyle
+#pragma mark - VRProgressHUDStyle
 - (void)createSolidBackground {
     sharedInstance.backgroundView = [[UIImageView alloc] initWithFrame:[UIApplication sharedApplication].keyWindow.bounds];
     sharedInstance.backgroundView.backgroundColor = _styleColor2;
@@ -307,7 +307,7 @@ static CGFloat kBorderWidth = 0.0;
     return gradientImg;
 }
 
-#pragma mark - HTProgressHUDView
+#pragma mark - VRProgressHUDView
 
 - (void)createDefaultLoadingView {
     // Default setup
@@ -320,7 +320,7 @@ static CGFloat kBorderWidth = 0.0;
     sharedInstance.staticCircle.alpha = 0.0;
     sharedInstance.movingCircle.alpha = 0.0;
     
-    if (sharedInstance.transition == HTProgressHUDTransitionDefault) {
+    if (sharedInstance.transition == VRProgressHUDTransitionDefault) {
         sharedInstance.staticCircle.transform = CGAffineTransformMakeScale(0.0, 0.0);
         sharedInstance.movingCircle.transform = CGAffineTransformMakeScale(0.0, 0.0);
     }
@@ -332,7 +332,7 @@ static CGFloat kBorderWidth = 0.0;
     [[UIApplication sharedApplication].keyWindow addSubview:sharedInstance.staticCircle];
     
     // Animation
-    CGFloat delay = (sharedInstance.transition != HTProgressHUDTransitionNone) ? kAnimationDuration : 0.0;
+    CGFloat delay = (sharedInstance.transition != VRProgressHUDTransitionNone) ? kAnimationDuration : 0.0;
     
     [UIView animateWithDuration:delay animations:^{
         sharedInstance.staticCircle.transform = CGAffineTransformMakeScale(1.0, 1.0);
@@ -364,7 +364,7 @@ static CGFloat kBorderWidth = 0.0;
     sharedInstance.circle_2.alpha = 0.0;
     sharedInstance.circle_3.alpha = 0.0;
     
-    if (sharedInstance.transition == HTProgressHUDTransitionDefault) {
+    if (sharedInstance.transition == VRProgressHUDTransitionDefault) {
         sharedInstance.circle_1.transform = CGAffineTransformMakeScale(0.0, 0.0);
         sharedInstance.circle_2.transform = CGAffineTransformMakeScale(0.0, 0.0);
         sharedInstance.circle_3.transform = CGAffineTransformMakeScale(0.0, 0.0);
@@ -379,7 +379,7 @@ static CGFloat kBorderWidth = 0.0;
     [[UIApplication sharedApplication].keyWindow addSubview:sharedInstance.circle_3];
     
     // Animation
-    CGFloat delay = (sharedInstance.transition != HTProgressHUDTransitionNone) ? kAnimationDuration : 0.0;
+    CGFloat delay = (sharedInstance.transition != VRProgressHUDTransitionNone) ? kAnimationDuration : 0.0;
     
     [UIView animateWithDuration:delay animations:^{
         sharedInstance.circle_1.transform = CGAffineTransformMakeScale(0.4, 0.4);

@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  HTProgressHUD Example
+//  VRProgressHUD Example
 //
 //  Created by Jakub Truhlar on 20.06.15.
 //  Copyright (c) 2015 Jakub Truhlar. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "HTProgressHUD.h"
+#import "VRProgressHUD.h"
 
 @interface ViewController ()
 
@@ -39,7 +39,7 @@
     animationView.animationRepeatCount = 0;
     [animationView startAnimating];
     
-    [HTProgressHUD showWithView:animationView style:_bgWithGradient transition:HTProgressHUDTransitionDefault backgroundAlpha:0.75];
+    [VRProgressHUD showWithView:animationView style:_bgWithGradient transition:VRProgressHUDTransitionDefault backgroundAlpha:0.75];
     
     // Dismiss
     [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
@@ -47,12 +47,12 @@
 
 - (IBAction)BuiltBtnPressed:(id)sender {
     // Built-in animation
-    [HTProgressHUD showWithStyle:_bgWithGradient];
+    [VRProgressHUD showWithStyle:_bgWithGradient];
     [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
 }
 
 - (void)hideHUD {
-    [HTProgressHUD hide];
+    [VRProgressHUD hide];
 }
 
 - (IBAction)bgSwitch:(id)sender {

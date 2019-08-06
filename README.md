@@ -1,26 +1,26 @@
-[![Version](https://img.shields.io/cocoapods/v/HTProgressHUD-2019.svg)](http://cocoapods.org/pods/HTProgressHUD)
-[![License](https://img.shields.io/cocoapods/l/HTProgressHUD-2019.svg)](http://cocoapods.org/pods/HTProgressHUD)
-[![Platform](https://img.shields.io/cocoapods/p/HTProgressHUD-2019.svg)](http://cocoapods.org/pods/HTProgressHUD)
+[![Version](https://img.shields.io/cocoapods/v/VRProgressHUD.svg)](http://cocoapods.org/pods/VRProgressHUD)
+[![License](https://img.shields.io/cocoapods/l/VRProgressHUD.svg)](http://cocoapods.org/pods/VRProgressHUD)
+[![Platform](https://img.shields.io/cocoapods/p/VRProgressHUD.svg)](http://cocoapods.org/pods/VRProgressHUD)
 
-# HTProgressHUD
+# VRProgressHUD
 
-**HTProgressHUD** is only a fork of **JTProgressHUD** with a custom loading animation.
+**VRProgressHUD** is only a fork of **JTProgressHUD** with a custom loading animation.
 
 **JTProgressHUD** is the new **HUD** designed to show **YOUR** views (eg. UIImageView animations) in the **HUD style** **with one line of code**. You can see many HUDs with easy implementation, but **the idea** is that you want that **easy implementation** with **HUD style** (background that block views below so the user knows that something is processing), but want to **show YOUR** animations/views (could be your app’s animated logo). *By DEFAULT* one animation is also included/built-in.
 
 <h3 align="center">
-  <img src="https://github.com/elchief84/JTProgressHUD-2019/blob/master/Screens/preview.png" alt=“Custom” height="800"/>
+  <img src="https://github.com/elchief84/VRProgressHUD/blob/master/Screens/preview.png" alt=“Custom” height="800"/>
 </h3>
 
 
 ## Installation
-There are two ways to add the **HTProgressHUD** library to your project. Add it as a regular library or install it through **CocoaPods**.
+There are two ways to add the **VRProgressHUD** library to your project. Add it as a regular library or install it through **CocoaPods**.
 
-`pod 'HTProgressHUD’`
+`pod 'VRProgressHUD’`
 
 You may also quick try the example project with
 
-`pod try HTProgressHUD`
+`pod try VRProgressHUD`
 
 **Library requires target iOS 7.0 and above**
 
@@ -34,10 +34,10 @@ JTProgressHUD is designed as a **singleton** so you don't have to care about it'
 ### Simple example:
 ```objective-c
 // Your custom view
-[HTProgressHUD showWithView:yourAnimationView];
+[VRProgressHUD showWithView:yourAnimationView];
 
 // Built-in view
-[HTProgressHUD show];
+[VRProgressHUD show];
 ```
 
 ### Methods:
@@ -60,7 +60,7 @@ JTProgressHUD is designed as a **singleton** so you don't have to care about it'
 
 ## Author
 This library is open-sourced by [Jakub Truhlar](http://kubatruhlar.cz).
-**HTProgressHUD** animation created by [Vincenzo Romano](https://www.enzoromano.eu). 
+**VRProgressHUD** animation created by [Vincenzo Romano](https://www.enzoromano.eu). 
 
 ## License
 The MIT License (MIT)
