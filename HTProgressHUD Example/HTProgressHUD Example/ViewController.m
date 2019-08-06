@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  JTProgressHUD Example
+//  HTProgressHUD Example
 //
 //  Created by Jakub Truhlar on 20.06.15.
 //  Copyright (c) 2015 Jakub Truhlar. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "JTProgressHUD.h"
+#import "HTProgressHUD.h"
 
 @interface ViewController ()
 
@@ -39,7 +39,7 @@
     animationView.animationRepeatCount = 0;
     [animationView startAnimating];
     
-    [JTProgressHUD showWithView:animationView style:_bgWithGradient transition:JTProgressHUDTransitionDefault backgroundAlpha:0.75];
+    [HTProgressHUD showWithView:animationView style:_bgWithGradient transition:HTProgressHUDTransitionDefault backgroundAlpha:0.75];
     
     // Dismiss
     [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
@@ -47,12 +47,12 @@
 
 - (IBAction)BuiltBtnPressed:(id)sender {
     // Built-in animation
-    [JTProgressHUD showWithStyle:_bgWithGradient];
+    [HTProgressHUD showWithStyle:_bgWithGradient];
     [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:false];
 }
 
 - (void)hideHUD {
-    [JTProgressHUD hide];
+    [HTProgressHUD hide];
 }
 
 - (IBAction)bgSwitch:(id)sender {

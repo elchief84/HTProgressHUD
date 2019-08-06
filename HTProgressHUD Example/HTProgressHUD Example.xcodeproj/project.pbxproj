@@ -13,8 +13,8 @@
 		3BD6DE711B35DCC6009A1201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6DE6F1B35DCC6009A1201 /* Main.storyboard */; };
 		3BD6DE731B35DCC6009A1201 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6DE721B35DCC6009A1201 /* Images.xcassets */; };
 		3BD6DE761B35DCC6009A1201 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6DE741B35DCC6009A1201 /* LaunchScreen.xib */; };
-		3BD6DE821B35DCC6009A1201 /* JTProgressHUD_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6DE811B35DCC6009A1201 /* JTProgressHUD_ExampleTests.m */; };
-		3BD6DE8E1B35DE1A009A1201 /* JTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6DE8D1B35DE1A009A1201 /* JTProgressHUD.m */; };
+		3BD6DE821B35DCC6009A1201 /* HTProgressHUD_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6DE811B35DCC6009A1201 /* HTProgressHUD_ExampleTests.m */; };
+		3BD6DE8E1B35DE1A009A1201 /* HTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6DE8D1B35DE1A009A1201 /* HTProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3BD6DE621B35DCC6009A1201 /* JTProgressHUD Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JTProgressHUD Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD6DE621B35DCC6009A1201 /* HTProgressHUD Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HTProgressHUD Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6DE661B35DCC6009A1201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BD6DE671B35DCC6009A1201 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD6DE691B35DCC6009A1201 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,11 +38,11 @@
 		3BD6DE701B35DCC6009A1201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BD6DE721B35DCC6009A1201 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3BD6DE751B35DCC6009A1201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3BD6DE7B1B35DCC6009A1201 /* JTProgressHUD ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JTProgressHUD ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD6DE7B1B35DCC6009A1201 /* HTProgressHUD ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTProgressHUD ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6DE801B35DCC6009A1201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BD6DE811B35DCC6009A1201 /* JTProgressHUD_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTProgressHUD_ExampleTests.m; sourceTree = "<group>"; };
-		3BD6DE8C1B35DE1A009A1201 /* JTProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTProgressHUD.h; sourceTree = "<group>"; };
-		3BD6DE8D1B35DE1A009A1201 /* JTProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTProgressHUD.m; sourceTree = "<group>"; };
+		3BD6DE811B35DCC6009A1201 /* HTProgressHUD_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTProgressHUD_ExampleTests.m; sourceTree = "<group>"; };
+		3BD6DE8C1B35DE1A009A1201 /* HTProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTProgressHUD.h; sourceTree = "<group>"; };
+		3BD6DE8D1B35DE1A009A1201 /* HTProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 		3BD6DE591B35DCC6009A1201 = {
 			isa = PBXGroup;
 			children = (
-				3BD6DE8B1B35DDDC009A1201 /* JTProgressHUD */,
-				3BD6DE641B35DCC6009A1201 /* JTProgressHUD Example */,
-				3BD6DE7E1B35DCC6009A1201 /* JTProgressHUD ExampleTests */,
+				3BD6DE8B1B35DDDC009A1201 /* HTProgressHUD */,
+				3BD6DE641B35DCC6009A1201 /* HTProgressHUD Example */,
+				3BD6DE7E1B35DCC6009A1201 /* HTProgressHUD ExampleTests */,
 				3BD6DE631B35DCC6009A1201 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,13 +76,13 @@
 		3BD6DE631B35DCC6009A1201 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BD6DE621B35DCC6009A1201 /* JTProgressHUD Example.app */,
-				3BD6DE7B1B35DCC6009A1201 /* JTProgressHUD ExampleTests.xctest */,
+				3BD6DE621B35DCC6009A1201 /* HTProgressHUD Example.app */,
+				3BD6DE7B1B35DCC6009A1201 /* HTProgressHUD ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3BD6DE641B35DCC6009A1201 /* JTProgressHUD Example */ = {
+		3BD6DE641B35DCC6009A1201 /* HTProgressHUD Example */ = {
 			isa = PBXGroup;
 			children = (
 				3BD6DE691B35DCC6009A1201 /* AppDelegate.h */,
@@ -94,7 +94,7 @@
 				3BD6DE741B35DCC6009A1201 /* LaunchScreen.xib */,
 				3BD6DE651B35DCC6009A1201 /* Supporting Files */,
 			);
-			path = "JTProgressHUD Example";
+			path = "HTProgressHUD Example";
 			sourceTree = "<group>";
 		};
 		3BD6DE651B35DCC6009A1201 /* Supporting Files */ = {
@@ -106,13 +106,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3BD6DE7E1B35DCC6009A1201 /* JTProgressHUD ExampleTests */ = {
+		3BD6DE7E1B35DCC6009A1201 /* HTProgressHUD ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				3BD6DE811B35DCC6009A1201 /* JTProgressHUD_ExampleTests.m */,
+				3BD6DE811B35DCC6009A1201 /* HTProgressHUD_ExampleTests.m */,
 				3BD6DE7F1B35DCC6009A1201 /* Supporting Files */,
 			);
-			path = "JTProgressHUD ExampleTests";
+			path = "HTProgressHUD ExampleTests";
 			sourceTree = "<group>";
 		};
 		3BD6DE7F1B35DCC6009A1201 /* Supporting Files */ = {
@@ -123,22 +123,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3BD6DE8B1B35DDDC009A1201 /* JTProgressHUD */ = {
+		3BD6DE8B1B35DDDC009A1201 /* HTProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				3BD6DE8C1B35DE1A009A1201 /* JTProgressHUD.h */,
-				3BD6DE8D1B35DE1A009A1201 /* JTProgressHUD.m */,
+				3BD6DE8C1B35DE1A009A1201 /* HTProgressHUD.h */,
+				3BD6DE8D1B35DE1A009A1201 /* HTProgressHUD.m */,
 			);
-			name = JTProgressHUD;
-			path = ../JTProgressHUD;
+			name = HTProgressHUD;
+			path = ../HTProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3BD6DE611B35DCC6009A1201 /* JTProgressHUD Example */ = {
+		3BD6DE611B35DCC6009A1201 /* HTProgressHUD Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BD6DE851B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "JTProgressHUD Example" */;
+			buildConfigurationList = 3BD6DE851B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "HTProgressHUD Example" */;
 			buildPhases = (
 				3BD6DE5E1B35DCC6009A1201 /* Sources */,
 				3BD6DE5F1B35DCC6009A1201 /* Frameworks */,
@@ -148,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = "JTProgressHUD Example";
+			name = "HTProgressHUD Example";
 			productName = "JTProgressHUD Example";
-			productReference = 3BD6DE621B35DCC6009A1201 /* JTProgressHUD Example.app */;
+			productReference = 3BD6DE621B35DCC6009A1201 /* HTProgressHUD Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3BD6DE7A1B35DCC6009A1201 /* JTProgressHUD ExampleTests */ = {
+		3BD6DE7A1B35DCC6009A1201 /* HTProgressHUD ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BD6DE881B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "JTProgressHUD ExampleTests" */;
+			buildConfigurationList = 3BD6DE881B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "HTProgressHUD ExampleTests" */;
 			buildPhases = (
 				3BD6DE771B35DCC6009A1201 /* Sources */,
 				3BD6DE781B35DCC6009A1201 /* Frameworks */,
@@ -166,9 +166,9 @@
 			dependencies = (
 				3BD6DE7D1B35DCC6009A1201 /* PBXTargetDependency */,
 			);
-			name = "JTProgressHUD ExampleTests";
+			name = "HTProgressHUD ExampleTests";
 			productName = "JTProgressHUD ExampleTests";
-			productReference = 3BD6DE7B1B35DCC6009A1201 /* JTProgressHUD ExampleTests.xctest */;
+			productReference = 3BD6DE7B1B35DCC6009A1201 /* HTProgressHUD ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -189,11 +189,12 @@
 					};
 				};
 			};
-			buildConfigurationList = 3BD6DE5D1B35DCC6009A1201 /* Build configuration list for PBXProject "JTProgressHUD Example" */;
+			buildConfigurationList = 3BD6DE5D1B35DCC6009A1201 /* Build configuration list for PBXProject "HTProgressHUD Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -202,8 +203,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3BD6DE611B35DCC6009A1201 /* JTProgressHUD Example */,
-				3BD6DE7A1B35DCC6009A1201 /* JTProgressHUD ExampleTests */,
+				3BD6DE611B35DCC6009A1201 /* HTProgressHUD Example */,
+				3BD6DE7A1B35DCC6009A1201 /* HTProgressHUD ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +236,7 @@
 			files = (
 				3BD6DE6E1B35DCC6009A1201 /* ViewController.m in Sources */,
 				3BD6DE6B1B35DCC6009A1201 /* AppDelegate.m in Sources */,
-				3BD6DE8E1B35DE1A009A1201 /* JTProgressHUD.m in Sources */,
+				3BD6DE8E1B35DE1A009A1201 /* HTProgressHUD.m in Sources */,
 				3BD6DE681B35DCC6009A1201 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BD6DE821B35DCC6009A1201 /* JTProgressHUD_ExampleTests.m in Sources */,
+				3BD6DE821B35DCC6009A1201 /* HTProgressHUD_ExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +254,7 @@
 /* Begin PBXTargetDependency section */
 		3BD6DE7D1B35DCC6009A1201 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3BD6DE611B35DCC6009A1201 /* JTProgressHUD Example */;
+			target = 3BD6DE611B35DCC6009A1201 /* HTProgressHUD Example */;
 			targetProxy = 3BD6DE7C1B35DCC6009A1201 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -362,7 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "JTProgressHUD Example/Info.plist";
+				INFOPLIST_FILE = "HTProgressHUD Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,7 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "JTProgressHUD Example/Info.plist";
+				INFOPLIST_FILE = "HTProgressHUD Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +393,7 @@
 				INFOPLIST_FILE = "JTProgressHUD ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JTProgressHUD Example.app/JTProgressHUD Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTProgressHUD Example.app/HTProgressHUD Example";
 			};
 			name = Debug;
 		};
@@ -404,14 +405,14 @@
 				INFOPLIST_FILE = "JTProgressHUD ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JTProgressHUD Example.app/JTProgressHUD Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTProgressHUD Example.app/HTProgressHUD Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3BD6DE5D1B35DCC6009A1201 /* Build configuration list for PBXProject "JTProgressHUD Example" */ = {
+		3BD6DE5D1B35DCC6009A1201 /* Build configuration list for PBXProject "HTProgressHUD Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BD6DE831B35DCC6009A1201 /* Debug */,
@@ -420,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BD6DE851B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "JTProgressHUD Example" */ = {
+		3BD6DE851B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "HTProgressHUD Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BD6DE861B35DCC6009A1201 /* Debug */,
@@ -429,7 +430,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BD6DE881B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "JTProgressHUD ExampleTests" */ = {
+		3BD6DE881B35DCC6009A1201 /* Build configuration list for PBXNativeTarget "HTProgressHUD ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BD6DE891B35DCC6009A1201 /* Debug */,

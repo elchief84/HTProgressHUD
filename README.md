@@ -1,8 +1,10 @@
-[![Version](https://img.shields.io/cocoapods/v/JTProgressHUD.svg)](http://cocoapods.org/pods/JTProgressHUD)
-[![License](https://img.shields.io/cocoapods/l/JTProgressHUD.svg)](http://cocoapods.org/pods/JTProgressHUD)
-[![Platform](https://img.shields.io/cocoapods/p/JTProgressHUD.svg)](http://cocoapods.org/pods/JTProgressHUD)
+[![Version](https://img.shields.io/cocoapods/v/HTProgressHUD.svg)](http://cocoapods.org/pods/HTProgressHUD)
+[![License](https://img.shields.io/cocoapods/l/HTProgressHUD.svg)](http://cocoapods.org/pods/HTProgressHUD)
+[![Platform](https://img.shields.io/cocoapods/p/HTProgressHUD.svg)](http://cocoapods.org/pods/HTProgressHUD)
 
-# JTProgressHUD
+# HTProgressHUD
+
+**HTProgressHUD** is only a fork of **JTProgressHUD** with a custom loading animation.
 
 **JTProgressHUD** is the new **HUD** designed to show **YOUR** views (eg. UIImageView animations) in the **HUD style** **with one line of code**. You can see many HUDs with easy implementation, but **the idea** is that you want that **easy implementation** with **HUD style** (background that block views below so the user knows that something is processing), but want to **show YOUR** animations/views (could be your app’s animated logo). *By DEFAULT* one animation is also included/built-in.
 
@@ -13,13 +15,13 @@
 
 
 ## Installation
-There are two ways to add the **JTProgressHUD** library to your project. Add it as a regular library or install it through **CocoaPods**.
+There are two ways to add the **HTProgressHUD** library to your project. Add it as a regular library or install it through **CocoaPods**.
 
-`pod 'JTProgressHUD’`
+`pod 'HTProgressHUD’`
 
 You may also quick try the example project with
 
-`pod try JTProgressHUD`
+`pod try HTProgressHUD`
 
 **Library requires target iOS 7.0 and above**
 
@@ -59,7 +61,8 @@ JTProgressHUD is designed as a **singleton** so you don't have to care about it'
 
 ## Author
 This library is open-sourced by [Jakub Truhlar](http://kubatruhlar.cz).
-    
+**HTProgressHUD** animation created by [Vincenzo Romano](https://www.enzoromano.eu). 
+
 ## License
 The MIT License (MIT)
 Copyright © 2015 Jakub Truhlar
